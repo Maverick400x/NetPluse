@@ -1,0 +1,416 @@
+{
+  "uid": "netpulse",
+  "title": "NetPulse",
+  "timezone": "browser",
+  "refresh": "5s",
+  "schemaVersion": 39,
+  "time": {
+    "from": "now-30m",
+    "to": "now"
+  },
+  "panels": [
+    {
+      "id": 1,
+      "type": "stat",
+      "title": "Download",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "netpulse-prom"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 0,
+        "w": 4,
+        "h": 4
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "Mbits"
+        },
+        "overrides": []
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "netpulse_download_mbps",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "netpulse-prom"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "stat",
+      "title": "Upload",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "netpulse-prom"
+      },
+      "gridPos": {
+        "x": 4,
+        "y": 0,
+        "w": 4,
+        "h": 4
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "Mbits"
+        },
+        "overrides": []
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "netpulse_upload_mbps",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "netpulse-prom"
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "stat",
+      "title": "Ping",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "netpulse-prom"
+      },
+      "gridPos": {
+        "x": 8,
+        "y": 0,
+        "w": 4,
+        "h": 4
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "ms",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "orange",
+                "value": 60
+              },
+              {
+                "color": "red",
+                "value": 150
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "netpulse_latency_ms",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "netpulse-prom"
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "stat",
+      "title": "Packet loss",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "netpulse-prom"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 0,
+        "w": 4,
+        "h": 4
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percentunit",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 0.05
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "netpulse_packet_loss_ratio",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "netpulse-prom"
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "stat",
+      "title": "Devices",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "netpulse-prom"
+      },
+      "gridPos": {
+        "x": 16,
+        "y": 0,
+        "w": 4,
+        "h": 4
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "netpulse_devices",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "netpulse-prom"
+          }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "type": "stat",
+      "title": "Anomalies",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "netpulse-prom"
+      },
+      "gridPos": {
+        "x": 20,
+        "y": 0,
+        "w": 4,
+        "h": 4
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "none",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "orange",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "netpulse_anomalies_total",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "netpulse-prom"
+          }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "type": "timeseries",
+      "title": "Throughput",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "netpulse-prom"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 4,
+        "w": 12,
+        "h": 8
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "Mbits",
+          "custom": {
+            "lineWidth": 2,
+            "fillOpacity": 10
+          }
+        },
+        "overrides": []
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "netpulse_download_mbps",
+          "legendFormat": "download",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "netpulse-prom"
+          }
+        },
+        {
+          "refId": "B",
+          "expr": "netpulse_upload_mbps",
+          "legendFormat": "upload",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "netpulse-prom"
+          }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "type": "timeseries",
+      "title": "Latency & jitter",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "netpulse-prom"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 4,
+        "w": 12,
+        "h": 8
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "ms",
+          "custom": {
+            "lineWidth": 2,
+            "fillOpacity": 10
+          }
+        },
+        "overrides": []
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "netpulse_latency_ms",
+          "legendFormat": "latency",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "netpulse-prom"
+          }
+        },
+        {
+          "refId": "B",
+          "expr": "netpulse_jitter_ms",
+          "legendFormat": "jitter",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "netpulse-prom"
+          }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "type": "timeseries",
+      "title": "Wi-Fi signal",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "netpulse-prom"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 12,
+        "w": 12,
+        "h": 8
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "dBm",
+          "custom": {
+            "lineWidth": 2,
+            "fillOpacity": 10
+          }
+        },
+        "overrides": []
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "netpulse_wifi_rssi_dbm",
+          "legendFormat": "RSSI",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "netpulse-prom"
+          }
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "type": "timeseries",
+      "title": "Data transferred (per minute)",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "netpulse-prom"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 12,
+        "w": 12,
+        "h": 8
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "bytes",
+          "custom": {
+            "lineWidth": 2,
+            "fillOpacity": 10
+          }
+        },
+        "overrides": []
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "increase(netpulse_received_bytes_total[1m])",
+          "legendFormat": "received",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "netpulse-prom"
+          }
+        },
+        {
+          "refId": "B",
+          "expr": "increase(netpulse_sent_bytes_total[1m])",
+          "legendFormat": "sent",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "netpulse-prom"
+          }
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "netpulse"
+  ]
+}

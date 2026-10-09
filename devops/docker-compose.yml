@@ -1,0 +1,37 @@
+# Prometheus + Grafana for NetPulse metrics.
+#   1. Start NetPulse on your Mac (metrics endpoint enabled in Insights).
+#   2. docker compose -f devops/docker-compose.yml up -d
+#   3. Open Grafana at http://localhost:3000 (admin / admin).
+#      The "NetPulse" dashboard is provisioned automatically.
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: netpulse-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus-data:/prometheus
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: netpulse-grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+    volumes:
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./grafana/dashboards:/var/lib/grafana/dashboards:ro
+      - grafana-data:/var/lib/grafana
+    depends_on:
+      - prometheus
+    restart: unless-stopped
+
+volumes:
+  prometheus-data:
+  grafana-data:

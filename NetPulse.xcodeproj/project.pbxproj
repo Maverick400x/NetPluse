@@ -1,0 +1,682 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03139FDC02712361A5EB1C86 /* LatencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4941038582119AE578D566CF /* LatencyView.swift */; };
+		043EC926433DD8B782E16273 /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE363B0AA54FE78892463F6 /* Shell.swift */; };
+		04AF219257C69E4A6CFDDCCB /* OverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43153CB0471204F9E65B409F /* OverviewView.swift */; };
+		08463DB70716926790E19C68 /* NetPulseWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4A1804F71029227F3484CB /* NetPulseWidget.swift */; };
+		0C4797F3C37CFA887D281874 /* AnomalyDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91398B3B1D27ABF0B30C59EC /* AnomalyDetector.swift */; };
+		12BF0B1F420EE94804FC558D /* Parsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEC6550E246C8394AFF3535 /* Parsers.swift */; };
+		1CF161E46E843F492FDA60FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D1D12C26E51F1C7993EC05D /* Assets.xcassets */; };
+		1DD741D396D92A931F285EEC /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6001A06F8BAF76AEBC0CBB /* Components.swift */; };
+		2615EE74752C5A361BFD1B9F /* NetPulseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C672234BAF162CEDAB0CE947 /* NetPulseApp.swift */; };
+		29350A71B78A1DAE59DED5F4 /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE363B0AA54FE78892463F6 /* Shell.swift */; };
+		4483BF10A371D827451D05D9 /* ParsersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AAB33859E6096C3AA24540 /* ParsersTests.swift */; };
+		44DE92A99BC8CE5D2DEAF089 /* WidgetContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6F4A815F21D3F62791189 /* WidgetContentView.swift */; };
+		4987A3B542C15F8EEE54F7A9 /* NetworkStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1721D81DB513E3B62E06B2ED /* NetworkStore.swift */; };
+		4AEFF734789F45B84B38352C /* WidgetContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6F4A815F21D3F62791189 /* WidgetContentView.swift */; };
+		4B697B4876FD469795E05133 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703214122E091A83475D6028 /* ContentView.swift */; };
+		4EF9D947779F032D179CA530 /* AnomalyDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91398B3B1D27ABF0B30C59EC /* AnomalyDetector.swift */; };
+		51168FFB9E8F491DAB230B7F /* DeviceScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA41DEC625495726B4661D4 /* DeviceScanner.swift */; };
+		5531E3E96A8B48B9C5B91D05 /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68295A3C533D97BFE53CBA3 /* MenuBarView.swift */; };
+		5B87A07A092EA3488C5D1DC0 /* WidgetContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6F4A815F21D3F62791189 /* WidgetContentView.swift */; };
+		63B8A1A9773AF7A546BE897D /* Pinger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71630962C09DDFD7AF215492 /* Pinger.swift */; };
+		6A55D5D5425DC1297CD756D9 /* DisplaySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DE80A00F3EA70C1F3E64F8 /* DisplaySettings.swift */; };
+		6C2FC43F241A45EC388ADDF6 /* NetPulseWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CF2B2265614375803CEBAA01 /* NetPulseWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		71B041DD1B668F99B075B2ED /* InsightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8EC30788BF1B9C50BB61B4 /* InsightsView.swift */; };
+		720E57DB9D4F1CEB2658FCBD /* PathObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8091D5B97BDDB628C01B0C9A /* PathObserver.swift */; };
+		8D4381A74226E8ABD4DEBFB3 /* DevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E06EF5354D09F813B5043 /* DevicesView.swift */; };
+		8F09562A87218A3298D7EBC1 /* ConnectionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B518DBC9A076A4E8F27B0E /* ConnectionInfo.swift */; };
+		9BE9FC54BD7022323A42C9A4 /* CustomizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089B0E3CAC3BB2B8930EC125 /* CustomizeView.swift */; };
+		9CF0C4702FF781D1B63DCF5B /* NetSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC3C8BD74420344861A4A60 /* NetSnapshot.swift */; };
+		9D247503B809B8699030B420 /* NetSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC3C8BD74420344861A4A60 /* NetSnapshot.swift */; };
+		9F07FBC9B007F04FC961D281 /* Pinger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71630962C09DDFD7AF215492 /* Pinger.swift */; };
+		A42832DC73D44A221029DB45 /* SpeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76F4C0940F04DE4E2478AFE /* SpeedView.swift */; };
+		A5568E70BC67859D1AD67A36 /* InterfaceStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866EB56025481C92C727EAED /* InterfaceStats.swift */; };
+		B26AEA5000D489569266F264 /* Customization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B8FB42B6FE9CC72BC3EB85 /* Customization.swift */; };
+		B44EACFD29C595E7BFAD8991 /* NetSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC3C8BD74420344861A4A60 /* NetSnapshot.swift */; };
+		D90342D672BFDFA5F5984322 /* MetricsExport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E436630EA655996C3168D41F /* MetricsExport.swift */; };
+		E7139347C59DBBF86C8B9CEB /* DisplaySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DE80A00F3EA70C1F3E64F8 /* DisplaySettings.swift */; };
+		EDA81EBCE8C57829659727E6 /* ConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF247D48E14FB615F6E08424 /* ConnectionView.swift */; };
+		EE224852FDC982A411121327 /* DisplaySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DE80A00F3EA70C1F3E64F8 /* DisplaySettings.swift */; };
+		FB5EB34C6E97E0ED7ED0D2DC /* Parsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEC6550E246C8394AFF3535 /* Parsers.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		75AAB9A6CB9AB4FE09C95BCA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D0230E09FEF04DBAB2FF4D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 966640AC9B8270B927255A77;
+			remoteInfo = NetPulseWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		873DC11089E0ADBC47840E96 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6C2FC43F241A45EC388ADDF6 /* NetPulseWidget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		01B46E33DAB273C6E51886E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		07D32720ADE29D1A8088D809 /* NetPulseWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NetPulseWidget.entitlements; sourceTree = "<group>"; };
+		081E06EF5354D09F813B5043 /* DevicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesView.swift; sourceTree = "<group>"; };
+		089B0E3CAC3BB2B8930EC125 /* CustomizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeView.swift; sourceTree = "<group>"; };
+		0C8CC3B8E3772E55AEE6B4C3 /* NetPulseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetPulseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E8EC30788BF1B9C50BB61B4 /* InsightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsView.swift; sourceTree = "<group>"; };
+		1721D81DB513E3B62E06B2ED /* NetworkStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStore.swift; sourceTree = "<group>"; };
+		2A6001A06F8BAF76AEBC0CBB /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		2D4A1804F71029227F3484CB /* NetPulseWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetPulseWidget.swift; sourceTree = "<group>"; };
+		31B8FB42B6FE9CC72BC3EB85 /* Customization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customization.swift; sourceTree = "<group>"; };
+		43153CB0471204F9E65B409F /* OverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewView.swift; sourceTree = "<group>"; };
+		4941038582119AE578D566CF /* LatencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatencyView.swift; sourceTree = "<group>"; };
+		4D1D12C26E51F1C7993EC05D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		55AF91FB8900897E0165F6AA /* NetPulse.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NetPulse.entitlements; sourceTree = "<group>"; };
+		64D3CBE9211F53A57ED6116A /* NetPulse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetPulse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		703214122E091A83475D6028 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		71630962C09DDFD7AF215492 /* Pinger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pinger.swift; sourceTree = "<group>"; };
+		8091D5B97BDDB628C01B0C9A /* PathObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathObserver.swift; sourceTree = "<group>"; };
+		866EB56025481C92C727EAED /* InterfaceStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceStats.swift; sourceTree = "<group>"; };
+		8FE363B0AA54FE78892463F6 /* Shell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shell.swift; sourceTree = "<group>"; };
+		91398B3B1D27ABF0B30C59EC /* AnomalyDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnomalyDetector.swift; sourceTree = "<group>"; };
+		95DE80A00F3EA70C1F3E64F8 /* DisplaySettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplaySettings.swift; sourceTree = "<group>"; };
+		AF247D48E14FB615F6E08424 /* ConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionView.swift; sourceTree = "<group>"; };
+		BEC3C8BD74420344861A4A60 /* NetSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetSnapshot.swift; sourceTree = "<group>"; };
+		C672234BAF162CEDAB0CE947 /* NetPulseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetPulseApp.swift; sourceTree = "<group>"; };
+		C68295A3C533D97BFE53CBA3 /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
+		CACA43BBAA4A988200D4031C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CCA41DEC625495726B4661D4 /* DeviceScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceScanner.swift; sourceTree = "<group>"; };
+		CDEC6550E246C8394AFF3535 /* Parsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parsers.swift; sourceTree = "<group>"; };
+		CF2B2265614375803CEBAA01 /* NetPulseWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NetPulseWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5AAB33859E6096C3AA24540 /* ParsersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsersTests.swift; sourceTree = "<group>"; };
+		D5B518DBC9A076A4E8F27B0E /* ConnectionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionInfo.swift; sourceTree = "<group>"; };
+		E2B6F4A815F21D3F62791189 /* WidgetContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetContentView.swift; sourceTree = "<group>"; };
+		E436630EA655996C3168D41F /* MetricsExport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsExport.swift; sourceTree = "<group>"; };
+		F76F4C0940F04DE4E2478AFE /* SpeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		45893321DD5074884E7EB15B /* NetPulseTests */ = {
+			isa = PBXGroup;
+			children = (
+				D5AAB33859E6096C3AA24540 /* ParsersTests.swift */,
+			);
+			path = NetPulseTests;
+			sourceTree = "<group>";
+		};
+		5A4EC38DD1CD6D9973825E78 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				64D3CBE9211F53A57ED6116A /* NetPulse.app */,
+				0C8CC3B8E3772E55AEE6B4C3 /* NetPulseTests.xctest */,
+				CF2B2265614375803CEBAA01 /* NetPulseWidget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		64CFA5F3DDB7AA658F00A779 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2A6001A06F8BAF76AEBC0CBB /* Components.swift */,
+				AF247D48E14FB615F6E08424 /* ConnectionView.swift */,
+				703214122E091A83475D6028 /* ContentView.swift */,
+				089B0E3CAC3BB2B8930EC125 /* CustomizeView.swift */,
+				081E06EF5354D09F813B5043 /* DevicesView.swift */,
+				0E8EC30788BF1B9C50BB61B4 /* InsightsView.swift */,
+				4941038582119AE578D566CF /* LatencyView.swift */,
+				C68295A3C533D97BFE53CBA3 /* MenuBarView.swift */,
+				43153CB0471204F9E65B409F /* OverviewView.swift */,
+				F76F4C0940F04DE4E2478AFE /* SpeedView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6DCB79CF066C57125EDFE41A = {
+			isa = PBXGroup;
+			children = (
+				EA0B8D28FF157F73890A8936 /* NetPulse */,
+				45893321DD5074884E7EB15B /* NetPulseTests */,
+				9966303A1B6825EE36CC4709 /* NetPulseWidget */,
+				86877E08D8F5AE71D5708220 /* Shared */,
+				5A4EC38DD1CD6D9973825E78 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		86877E08D8F5AE71D5708220 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				95DE80A00F3EA70C1F3E64F8 /* DisplaySettings.swift */,
+				BEC3C8BD74420344861A4A60 /* NetSnapshot.swift */,
+				E2B6F4A815F21D3F62791189 /* WidgetContentView.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		9966303A1B6825EE36CC4709 /* NetPulseWidget */ = {
+			isa = PBXGroup;
+			children = (
+				01B46E33DAB273C6E51886E9 /* Info.plist */,
+				07D32720ADE29D1A8088D809 /* NetPulseWidget.entitlements */,
+				2D4A1804F71029227F3484CB /* NetPulseWidget.swift */,
+			);
+			path = NetPulseWidget;
+			sourceTree = "<group>";
+		};
+		B9119965EF438B0D20AA8A5A /* Monitors */ = {
+			isa = PBXGroup;
+			children = (
+				91398B3B1D27ABF0B30C59EC /* AnomalyDetector.swift */,
+				D5B518DBC9A076A4E8F27B0E /* ConnectionInfo.swift */,
+				CCA41DEC625495726B4661D4 /* DeviceScanner.swift */,
+				866EB56025481C92C727EAED /* InterfaceStats.swift */,
+				E436630EA655996C3168D41F /* MetricsExport.swift */,
+				8091D5B97BDDB628C01B0C9A /* PathObserver.swift */,
+				71630962C09DDFD7AF215492 /* Pinger.swift */,
+			);
+			path = Monitors;
+			sourceTree = "<group>";
+		};
+		DAA4169FFF4DEFFE765E549B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				31B8FB42B6FE9CC72BC3EB85 /* Customization.swift */,
+				C672234BAF162CEDAB0CE947 /* NetPulseApp.swift */,
+				1721D81DB513E3B62E06B2ED /* NetworkStore.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		EA0B8D28FF157F73890A8936 /* NetPulse */ = {
+			isa = PBXGroup;
+			children = (
+				4D1D12C26E51F1C7993EC05D /* Assets.xcassets */,
+				CACA43BBAA4A988200D4031C /* Info.plist */,
+				55AF91FB8900897E0165F6AA /* NetPulse.entitlements */,
+				DAA4169FFF4DEFFE765E549B /* App */,
+				B9119965EF438B0D20AA8A5A /* Monitors */,
+				EE452C0522C8823B484846ED /* Support */,
+				64CFA5F3DDB7AA658F00A779 /* Views */,
+			);
+			path = NetPulse;
+			sourceTree = "<group>";
+		};
+		EE452C0522C8823B484846ED /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				CDEC6550E246C8394AFF3535 /* Parsers.swift */,
+				8FE363B0AA54FE78892463F6 /* Shell.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		539494B2C8AAA6BA0ED8FF19 /* NetPulseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D45CD2AAE82344AB42122B1D /* Build configuration list for PBXNativeTarget "NetPulseTests" */;
+			buildPhases = (
+				A583343341298BE5373C3D1F /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetPulseTests;
+			packageProductDependencies = (
+			);
+			productName = NetPulseTests;
+			productReference = 0C8CC3B8E3772E55AEE6B4C3 /* NetPulseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		60F3F22DE90F07E0B18EF3B0 /* NetPulse */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69C78CC3637C390C5F5BCCD2 /* Build configuration list for PBXNativeTarget "NetPulse" */;
+			buildPhases = (
+				5FFE3339B898AC1FCD474B6D /* Sources */,
+				CC78F7F42EE80C85CB8FA8CB /* Resources */,
+				873DC11089E0ADBC47840E96 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F558104327575DBE57A96D23 /* PBXTargetDependency */,
+			);
+			name = NetPulse;
+			packageProductDependencies = (
+			);
+			productName = NetPulse;
+			productReference = 64D3CBE9211F53A57ED6116A /* NetPulse.app */;
+			productType = "com.apple.product-type.application";
+		};
+		966640AC9B8270B927255A77 /* NetPulseWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93C98BD7F94BB529C8CD7CFC /* Build configuration list for PBXNativeTarget "NetPulseWidget" */;
+			buildPhases = (
+				5FDE17911DBAE9A97D9AFA31 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetPulseWidget;
+			packageProductDependencies = (
+			);
+			productName = NetPulseWidget;
+			productReference = CF2B2265614375803CEBAA01 /* NetPulseWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2D0230E09FEF04DBAB2FF4D7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					539494B2C8AAA6BA0ED8FF19 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					60F3F22DE90F07E0B18EF3B0 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					966640AC9B8270B927255A77 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 7C692F7B537A491A144AE6D9 /* Build configuration list for PBXProject "NetPulse" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 6DCB79CF066C57125EDFE41A;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 5A4EC38DD1CD6D9973825E78 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				60F3F22DE90F07E0B18EF3B0 /* NetPulse */,
+				966640AC9B8270B927255A77 /* NetPulseWidget */,
+				539494B2C8AAA6BA0ED8FF19 /* NetPulseTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC78F7F42EE80C85CB8FA8CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CF161E46E843F492FDA60FF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5FDE17911DBAE9A97D9AFA31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A55D5D5425DC1297CD756D9 /* DisplaySettings.swift in Sources */,
+				08463DB70716926790E19C68 /* NetPulseWidget.swift in Sources */,
+				B44EACFD29C595E7BFAD8991 /* NetSnapshot.swift in Sources */,
+				44DE92A99BC8CE5D2DEAF089 /* WidgetContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FFE3339B898AC1FCD474B6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EF9D947779F032D179CA530 /* AnomalyDetector.swift in Sources */,
+				1DD741D396D92A931F285EEC /* Components.swift in Sources */,
+				8F09562A87218A3298D7EBC1 /* ConnectionInfo.swift in Sources */,
+				EDA81EBCE8C57829659727E6 /* ConnectionView.swift in Sources */,
+				4B697B4876FD469795E05133 /* ContentView.swift in Sources */,
+				B26AEA5000D489569266F264 /* Customization.swift in Sources */,
+				9BE9FC54BD7022323A42C9A4 /* CustomizeView.swift in Sources */,
+				51168FFB9E8F491DAB230B7F /* DeviceScanner.swift in Sources */,
+				8D4381A74226E8ABD4DEBFB3 /* DevicesView.swift in Sources */,
+				EE224852FDC982A411121327 /* DisplaySettings.swift in Sources */,
+				71B041DD1B668F99B075B2ED /* InsightsView.swift in Sources */,
+				A5568E70BC67859D1AD67A36 /* InterfaceStats.swift in Sources */,
+				03139FDC02712361A5EB1C86 /* LatencyView.swift in Sources */,
+				5531E3E96A8B48B9C5B91D05 /* MenuBarView.swift in Sources */,
+				D90342D672BFDFA5F5984322 /* MetricsExport.swift in Sources */,
+				2615EE74752C5A361BFD1B9F /* NetPulseApp.swift in Sources */,
+				9D247503B809B8699030B420 /* NetSnapshot.swift in Sources */,
+				4987A3B542C15F8EEE54F7A9 /* NetworkStore.swift in Sources */,
+				04AF219257C69E4A6CFDDCCB /* OverviewView.swift in Sources */,
+				FB5EB34C6E97E0ED7ED0D2DC /* Parsers.swift in Sources */,
+				720E57DB9D4F1CEB2658FCBD /* PathObserver.swift in Sources */,
+				63B8A1A9773AF7A546BE897D /* Pinger.swift in Sources */,
+				29350A71B78A1DAE59DED5F4 /* Shell.swift in Sources */,
+				A42832DC73D44A221029DB45 /* SpeedView.swift in Sources */,
+				4AEFF734789F45B84B38352C /* WidgetContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A583343341298BE5373C3D1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C4797F3C37CFA887D281874 /* AnomalyDetector.swift in Sources */,
+				E7139347C59DBBF86C8B9CEB /* DisplaySettings.swift in Sources */,
+				9CF0C4702FF781D1B63DCF5B /* NetSnapshot.swift in Sources */,
+				12BF0B1F420EE94804FC558D /* Parsers.swift in Sources */,
+				4483BF10A371D827451D05D9 /* ParsersTests.swift in Sources */,
+				9F07FBC9B007F04FC961D281 /* Pinger.swift in Sources */,
+				043EC926433DD8B782E16273 /* Shell.swift in Sources */,
+				5B87A07A092EA3488C5D1DC0 /* WidgetContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F558104327575DBE57A96D23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 966640AC9B8270B927255A77 /* NetPulseWidget */;
+			targetProxy = 75AAB9A6CB9AB4FE09C95BCA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		19A9B1FE5580A369050F9AE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NetPulse/NetPulse.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = NetPulse/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.netpulse.app;
+				PRODUCT_NAME = NetPulse;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1C7DE9F853E9A8C7C41372B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.netpulse.tests;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2E35214494D3E07A8E2F813C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.netpulse.tests;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		472648FE2AE8597A473B89DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		5E5C2A407FF5F3C5F1F88A5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = NetPulseWidget/NetPulseWidget.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = NetPulseWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.netpulse.app.widget;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7860C3CDC3CEA73A4F752B1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NetPulse/NetPulse.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = NetPulse/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.netpulse.app;
+				PRODUCT_NAME = NetPulse;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9933A3A93BCF706BBECC8A5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		FFB5412356199A4490282E21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = NetPulseWidget/NetPulseWidget.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = NetPulseWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.netpulse.app.widget;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		69C78CC3637C390C5F5BCCD2 /* Build configuration list for PBXNativeTarget "NetPulse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7860C3CDC3CEA73A4F752B1B /* Debug */,
+				19A9B1FE5580A369050F9AE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7C692F7B537A491A144AE6D9 /* Build configuration list for PBXProject "NetPulse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				472648FE2AE8597A473B89DF /* Debug */,
+				9933A3A93BCF706BBECC8A5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		93C98BD7F94BB529C8CD7CFC /* Build configuration list for PBXNativeTarget "NetPulseWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E5C2A407FF5F3C5F1F88A5B /* Debug */,
+				FFB5412356199A4490282E21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D45CD2AAE82344AB42122B1D /* Build configuration list for PBXNativeTarget "NetPulseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E35214494D3E07A8E2F813C /* Debug */,
+				1C7DE9F853E9A8C7C41372B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2D0230E09FEF04DBAB2FF4D7 /* Project object */;
+}

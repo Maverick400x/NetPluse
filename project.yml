@@ -1,0 +1,103 @@
+# XcodeGen spec — run `xcodegen generate` to create NetPulse.xcodeproj.
+# Keeping the project as YAML (instead of a committed .xcodeproj) avoids
+# merge conflicts and lets CI regenerate it from scratch.
+name: NetPulse
+
+options:
+  bundleIdPrefix: com.netpulse
+  deploymentTarget:
+    macOS: "14.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    MACOSX_DEPLOYMENT_TARGET: "14.0"
+    # Set your Apple ID team here (Xcode → Settings → Accounts), or pick it
+    # in Signing & Capabilities after generating. Needed for the widget's App Group.
+    DEVELOPMENT_TEAM: ""
+    CODE_SIGN_STYLE: Automatic
+
+targets:
+  NetPulse:
+    type: application
+    platform: macOS
+    sources:
+      - path: NetPulse
+      - path: Shared
+    info:
+      path: NetPulse/Info.plist
+      properties:
+        CFBundleDisplayName: NetPulse
+        LSApplicationCategoryType: public.app-category.utilities
+        LSMinimumSystemVersion: "14.0"
+        NSHumanReadableCopyright: "NetPulse — M.Tech project"
+        NSLocationUsageDescription: "NetPulse needs Location access only so macOS will reveal your Wi-Fi network name (SSID). Your location is never read or stored."
+        NSLocationWhenInUseUsageDescription: "NetPulse needs Location access only so macOS will reveal your Wi-Fi network name (SSID). Your location is never read or stored."
+        NSLocalNetworkUsageDescription: "NetPulse scans your local network to list connected devices."
+        AppGroupID: "$(TeamIdentifierPrefix)com.netpulse.shared"
+    entitlements:
+      path: NetPulse/NetPulse.entitlements
+      properties:
+        # Not sandboxed: the app runs /sbin/ping, /usr/sbin/arp and /sbin/route.
+        # (A Mac App Store build would replace these with native APIs.)
+        com.apple.security.app-sandbox: false
+        com.apple.security.personal-information.location: true
+        com.apple.security.application-groups:
+          - "$(TeamIdentifierPrefix)com.netpulse.shared"
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.netpulse.app
+        PRODUCT_NAME: NetPulse
+        ENABLE_HARDENED_RUNTIME: YES
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    dependencies:
+      - target: NetPulseWidget
+        embed: true
+    scheme:
+      testTargets:
+        - NetPulseTests
+
+  NetPulseWidget:
+    type: app-extension
+    platform: macOS
+    sources:
+      - path: NetPulseWidget
+      - path: Shared
+    info:
+      path: NetPulseWidget/Info.plist
+      properties:
+        CFBundleDisplayName: NetPulse Widget
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+        AppGroupID: "$(TeamIdentifierPrefix)com.netpulse.shared"
+    entitlements:
+      path: NetPulseWidget/NetPulseWidget.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+        com.apple.security.application-groups:
+          - "$(TeamIdentifierPrefix)com.netpulse.shared"
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.netpulse.app.widget
+        ENABLE_HARDENED_RUNTIME: YES
+        SKIP_INSTALL: YES
+
+  # Logic-only unit tests: they compile the pure parsers/detector directly,
+  # so they run on CI without code signing or a host app.
+  NetPulseTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - path: NetPulseTests
+      - path: NetPulse/Support/Parsers.swift
+      - path: NetPulse/Monitors/AnomalyDetector.swift
+      - path: NetPulse/Monitors/Pinger.swift
+      - path: NetPulse/Support/Shell.swift
+      - path: Shared
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.netpulse.tests
+        GENERATE_INFOPLIST_FILE: YES
