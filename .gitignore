@@ -1,0 +1,8 @@
+NetPulse.xcodeproj/
+build/
+DerivedData/
+.DS_Store
+xcuserdata/
+ml-report/
+.venv/
+__pycache__/

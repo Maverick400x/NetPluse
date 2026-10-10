@@ -1,0 +1,14 @@
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+  - job_name: netpulse
+    static_configs:
+      # host.docker.internal = your Mac, seen from inside Docker.
+      - targets: ["host.docker.internal:9464"]
+        labels:
+          device: macbook
+
+# Example alert rules you can enable for the DevOps part of the project:
+# rule_files:
+#   - alerts.yml

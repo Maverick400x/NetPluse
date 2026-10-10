@@ -1,0 +1,64 @@
+name: Build & Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  macos:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode_16.4.app || true
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - name: Generate Xcode project
+        run: xcodegen generate
+
+      - name: Unit tests
+        run: |
+          xcodebuild test \
+            -project NetPulse.xcodeproj \
+            -scheme NetPulse \
+            -destination 'platform=macOS' \
+            CODE_SIGNING_ALLOWED=NO
+
+      - name: Build release app (unsigned)
+        run: |
+          xcodebuild build \
+            -project NetPulse.xcodeproj \
+            -scheme NetPulse \
+            -configuration Release \
+            -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO
+
+      - name: Package
+        run: |
+          cd build/Build/Products/Release
+          ditto -c -k --keepParent NetPulse.app NetPulse.zip
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: NetPulse-app
+          path: build/Build/Products/Release/NetPulse.zip
+
+  ml:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r ml/requirements.txt
+      - name: Smoke-test the anomaly model on synthetic data
+        run: python ml/anomaly_model.py --demo --out ml-report
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ml-report
+          path: ml-report
